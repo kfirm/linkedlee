@@ -1,6 +1,6 @@
 {
   "name": "linkedlee",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JavaScript library implementation of a Linked List with extra power",
   "main": "src/linkedlee.min.js",
   "scripts": {
