@@ -78,8 +78,12 @@
 
                 var prevNode = nodes[nodes.length - 1];
 
+                prevNode = new Node(prevNode.value(), node, prevNode.prev());
                 node = new Node(value, null, prevNode);
-                prevNode.setNext(node);
+
+                // todo: check if this is needed
+                nodes[nodes.length - 1] = prevNode;
+
             }
 
             return node;
