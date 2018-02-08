@@ -8,14 +8,6 @@
         var next = _next;
         var prev = _prev;
 
-        function setNext(node) {
-            next = node;
-        }
-
-        function setPrev(node) {
-            prev = node;
-        }
-
 
         this.next = function () {
             return next;
@@ -27,6 +19,14 @@
 
         this.value = function () {
             return value;
+        };
+
+        this.setNext = function (node) {
+            next = node;
+        };
+
+        this.setPrev = function (node) {
+            prev = node;
         };
 
         this.remove = function () {
@@ -78,12 +78,8 @@
 
                 var prevNode = nodes[nodes.length - 1];
 
-                prevNode = new Node(prevNode.value(), node, prevNode.prev());
                 node = new Node(value, null, prevNode);
-
-                // todo: check if this is needed
-                nodes[nodes.length - 1] = prevNode;
-
+                prevNode.setNext(node);
             }
 
             return node;
