@@ -51,9 +51,9 @@ linkedList.push('c');
 
 var node = linkedList.get(0); 
 do {
-    console.log(firstNode.value());
+    console.log(node.value());
     node = node.next();
-} while (firstNode)
+} while (node)
 // will output: a c b
 
 ```
