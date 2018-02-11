@@ -24,6 +24,7 @@ Linkedlee provides an implementation of a linked list which can be used both in 
 
 **linkedList.push(item)** - add an item.  
 **linkedList.pushTop(item)** - add an item to the top of the linked list (as the first item)    
+**linkedList.pushAt(index,item)** - replace the content of a a node by node index.     
 **linkedList.get(index)** - returns the node in the given index.  
 **linkedList.remove(index)** - removes the node in the given index.    
 **linkedList.size()** - return the linked list size.   
