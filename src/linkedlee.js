@@ -60,6 +60,23 @@
         node.setPrev(tempAPrev);
     };
 
+    Node.prototype.reverse = function () {
+
+        var firstNode = this;
+
+        var currentNode = this;
+
+        do {
+            var next = currentNode.next();
+
+            currentNode.setNext( currentNode.prev() );
+            currentNode.setPrev( next );
+
+            currentNode = next;
+
+        } while (currentNode && firstNode !== currentNode);
+    };
+
     // Node.prototype.replace = function (value) {
     //
     //     var newNode = new Node(value, this.next(), this.prev());
@@ -86,7 +103,11 @@
         }
 
         function isMaxLengthExceeded() {
-            return !( (maxSize !== null || maxSize === undefined) && maxSize > nodes.length )
+            if (maxSize === null || maxSize === undefined){
+                return false;
+            } else {
+                return maxSize >= nodes.length;
+            }
         }
 
         function getNode(value) {
@@ -184,6 +205,13 @@
 
                 nodes[0].setPrev(null);
                 nodes[nodes.length - 1].setNext(null);
+            }
+        };
+
+        this.reverse = function () {
+            if (nodes.length){
+                nodes[0].reverse();
+                nodes.reverse();
             }
         };
     }

@@ -32,7 +32,8 @@ Linkedlee provides an implementation of a linked list which can be used both in 
 **linkedList.up(index)** - moved the node in the given index up the linked list chain by one.                              
 **linkedList.loop()** - makes the linked list as a "looped" list - which means that the next() of the last 
                         element points to the first element. And the first element prev() points to the last element.                                                        
-**linkedList.unloop()** - removed the looping of the list. the opposite of the "loop()" function                                
+**linkedList.unloop()** - removed the looping of the list. the opposite of the "loop()" function                                  
+**linkedList.reverse()** - reverse the linked list                                  
 
 # Node (Each element in the list) API
 

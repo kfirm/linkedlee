@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../src/linkedlee.js">
+
+    </script>
+</head>
+<body>
+
+<script>
+    function print(_linkedList) {
+
+        console.log('-------------');
+        var node = _linkedList.get(0);
+
+        do {
+            console.log('Value: ', node.value());
+            node = node.next();
+        } while (node);
+        console.log('-------------');
+    }
+
+    var linkedList = new LinkedList();
+
+    linkedList.push('a');
+    linkedList.push('b');
+    linkedList.push('c');
+
+    print(linkedList);
+
+    linkedList.reverse();
+
+    print(linkedList);
+
+    for (var i = 0; i < linkedList.size(); i++){
+        console.log(linkedList.get(i).value());
+    }
+
+//    linkedList.loop();
+//
+//    print(linkedList);
+
+</script>
+
+</body>
+</html>
