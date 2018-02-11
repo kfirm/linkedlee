@@ -54,8 +54,20 @@
         node.setPrev(tempAPrev);
     };
 
-    function LinkedList(maxSize) {
+    Node.prototype.replace = function (value) {
 
+        var newNode = new Node(value, this.next(), this.prev());
+
+        if (this.prev()){
+            this.prev().setNext(newNode);
+        }
+
+        if (this.next()){
+            this.next().setPrev(newNode);
+        }
+    };
+
+    function LinkedList(maxSize) {
 
         var nodes = [];
 
@@ -91,6 +103,17 @@
                 var node = getNode(value);
                 nodes.push(node);
                 return node;
+            } else {
+                return null;
+            }
+        };
+
+        this.pushAt = function (index, value) {
+            if (!isMaxLengthExceeded() && index && index > -1) {
+
+                nodes[index].replace(value);
+
+                return nodes[index];
             } else {
                 return null;
             }

@@ -1,6 +1,6 @@
 {
   "name": "linkedlee",
-  "version": "1.0.3",
+  "version": "1.1.4",
   "description": "JavaScript library implementation of a Linked List with extra power",
   "main": "src/linkedlee.min.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "https://github.com/kfirm/linkedlee.git"
   },
   "keywords": [
-    "queue"
+    "linked", "list", "linked list", "collection"
   ],
   "author": "Kfir Marouani <dev.kfir@gmail.com>",
   "license": "ISC",
