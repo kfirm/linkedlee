@@ -33,10 +33,10 @@ Linkedlee provides an implementation of a linked list which can be used both in 
 
 # Node API
 
-**node.next()** - get next node
-**node.prev()** - get previous node
-**node.value()** - get node's value/data
-**node.remove()** - removed the node from the list
+**node.next()** - get next node  
+**node.prev()** - get previous node  
+**node.value()** - get node's value/data  
+**node.remove()** - removed the node from the list  
  
 # Examples
 
