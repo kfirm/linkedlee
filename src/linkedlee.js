@@ -77,6 +77,7 @@
     function LinkedList(maxSize) {
 
         var nodes = [];
+        var isLooped = false;
 
         function swap(indexA, indexB) {
             var tempValue = nodes[indexB];
@@ -116,7 +117,7 @@
         };
 
         this.pushAt = function (index, value) {
-            if (index && index > -1) {
+            if (index && index > -1 && nodes.length > index) {
 
                 // nodes[index].replace(value);
                 nodes[index].setValue(value);
@@ -164,6 +165,26 @@
             }
 
             swap(index, index - 1);
+        };
+
+        this.loop = function () {
+
+            if (nodes.length) {
+                isLooped = true;
+
+                nodes[0].setPrev(nodes[nodes.length - 1]);
+                nodes[nodes.length - 1].setNext(nodes[0]);
+            }
+        };
+
+        this.unloop = function () {
+
+            if (nodes.length) {
+                isLooped = false;
+
+                nodes[0].setPrev(null);
+                nodes[nodes.length - 1].setNext(null);
+            }
         };
     }
 
