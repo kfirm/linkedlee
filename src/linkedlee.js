@@ -19,6 +19,7 @@
 
         this.value = function () {
             return value;
+
         };
 
         this.setNext = function (node) {
@@ -28,6 +29,11 @@
         this.setPrev = function (node) {
             prev = node;
         };
+
+        this.setValue = function (_value) {
+            value = _value;
+        };
+
 
         this.remove = function () {
 
@@ -54,18 +60,19 @@
         node.setPrev(tempAPrev);
     };
 
-    Node.prototype.replace = function (value) {
-
-        var newNode = new Node(value, this.next(), this.prev());
-
-        if (this.prev()){
-            this.prev().setNext(newNode);
-        }
-
-        if (this.next()){
-            this.next().setPrev(newNode);
-        }
-    };
+    // Node.prototype.replace = function (value) {
+    //
+    //     var newNode = new Node(value, this.next(), this.prev());
+    //
+    //     if (this.prev()){
+    //         this.prev().setNext(newNode);
+    //     }
+    //
+    //     if (this.next()){
+    //         this.next().setPrev(newNode);
+    //     }
+    //
+    // };
 
     function LinkedList(maxSize) {
 
@@ -109,9 +116,10 @@
         };
 
         this.pushAt = function (index, value) {
-            if (!isMaxLengthExceeded() && index && index > -1) {
+            if (index && index > -1) {
 
-                nodes[index].replace(value);
+                // nodes[index].replace(value);
+                nodes[index].setValue(value);
 
                 return nodes[index];
             } else {
