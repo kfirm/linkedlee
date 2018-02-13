@@ -214,6 +214,10 @@
                 nodes.reverse();
             }
         };
+
+        this.clear = function () {
+            nodes = [];
+        };
     }
 
     if (typeof module === "object" && typeof module.exports === "object") {
