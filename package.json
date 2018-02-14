@@ -1,8 +1,8 @@
 {
   "name": "linkedlee",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "JavaScript library implementation of a Linked List with extra power",
-  "main": "src/linkedlee.min.js",
+  "main": "dist/linkedlee.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "mini": "gulp compress"
