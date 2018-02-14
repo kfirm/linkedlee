@@ -94,7 +94,7 @@
         }
 
         function isMaxLengthExceeded() {
-            if (maxSize === null || maxSize === undefined){
+            if (maxSize === null || maxSize === undefined || !Number.isInteger(maxSize) || maxSize <= 0){
                 return false;
             } else {
                 return maxSize <= nodes.length;
