@@ -164,8 +164,10 @@
         };
 
         this.remove = function (index) {
-            nodes[index].remove();
-            nodes.splice(index, 1);
+            if (index > 0 && nodes[index]){
+                nodes[index].remove();
+                nodes.splice(index, 1);
+            }
         };
 
         this.size = function () {
