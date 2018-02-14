@@ -106,7 +106,7 @@
             if (maxSize === null || maxSize === undefined){
                 return false;
             } else {
-                return maxSize >= nodes.length;
+                return maxSize <= nodes.length;
             }
         }
 
