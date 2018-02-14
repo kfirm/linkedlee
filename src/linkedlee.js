@@ -60,6 +60,11 @@
         node.setPrev(tempAPrev);
     };
 
+    /**
+     * Reverse the list.
+     * If the list is circular it will stop on when reaching the first node again.
+     *
+     */
     Node.prototype.reverse = function () {
 
         var firstNode = this;
@@ -76,20 +81,6 @@
 
         } while (currentNode && firstNode !== currentNode);
     };
-
-    // Node.prototype.replace = function (value) {
-    //
-    //     var newNode = new Node(value, this.next(), this.prev());
-    //
-    //     if (this.prev()){
-    //         this.prev().setNext(newNode);
-    //     }
-    //
-    //     if (this.next()){
-    //         this.next().setPrev(newNode);
-    //     }
-    //
-    // };
 
     function LinkedList(maxSize) {
 
@@ -149,6 +140,12 @@
             }
         };
 
+
+        /**
+         * Push a node to be the first item in the linked list
+         * @param value of the node
+         * @returns returns the inserted node - else returns null
+         */
         this.pushTop = function (value) {
             if (!isMaxLengthExceeded()) {
                 var node = getNode(value);

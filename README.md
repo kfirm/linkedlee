@@ -2,23 +2,23 @@
 
 JavaScript implementation of a Linked List with extra power
 
+# Usage
+
+Linkedlee provides an implementation of a linked list which can be used both in NodeJS applications and on your web application.
+
 # Installation 
 
-Simply reference qulee.js or qulee.min.js on your html page
+Using CDN:
 
 ```
-<script src="linkedlee.min.js"></script>
+<script src="https://unpkg.com/linkedlee/dist/linkedlee.min.js"></script>
 ```
 
-Using it on node.js:
+Using NPM:
 
 ```
 npm install linkedlee --save
-```
-
-# Usage
-
-Linkedlee provides an implementation of a linked list which can be used both in NodeJS applications and on your web application.   
+```   
 
 # API
 
