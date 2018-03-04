@@ -160,10 +160,22 @@
             return nodes[index];
         };
 
+        /**
+         *
+         * @param index of node to be removed
+         * @returns {*} The removed node or null if nothing was removed
+         */
         this.remove = function (index) {
             if (index > 0 && nodes[index]){
+
+                var removedNode = nodes[index];
+
                 nodes[index].remove();
                 nodes.splice(index, 1);
+
+                return removedNode;
+            } else {
+                return null;
             }
         };
 
